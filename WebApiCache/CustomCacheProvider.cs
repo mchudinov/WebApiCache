@@ -21,7 +21,6 @@ namespace WebApiCache
 
         public T Get<T>(string key) where T : class
         {
-            Console.WriteLine("cache: key = " + key);
             return CacheManagerCache.Get<T>(key);
         }
 
