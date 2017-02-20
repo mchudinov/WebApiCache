@@ -2,7 +2,7 @@
 
 namespace Cache
 {
-    public interface ICacheProvider
+    public interface ICache
     {
         /// <summary>
         /// Retrieve cached item

@@ -7,7 +7,7 @@ namespace WebApiCache
 {
     internal class CustomCacheProvider : IApiOutputCache
     {
-        private static readonly Cache.ICacheProvider CacheManagerCache = new Cache.CacheManagerCache();
+        private static readonly Cache.ICache CacheManagerCache = new Cache.CacheManagerProvider();
         private static readonly IList<string> Keys = new List<string>();
 
         public void RemoveStartsWith(string key)

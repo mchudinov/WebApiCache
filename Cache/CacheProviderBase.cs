@@ -3,7 +3,7 @@ using System.Configuration;
 
 namespace Cache
 {
-    public abstract class CacheProvider<TCache> : ICacheProvider
+    public abstract class CacheProviderBase<TCache> : ICache
     {
         public int CacheDuration { get; set; }
 
@@ -13,7 +13,7 @@ namespace Cache
 
         protected readonly string KeyPrefix;
 
-        public CacheProvider()
+        public CacheProviderBase()
         {
             int result;
             CacheDuration = int.TryParse(ConfigurationManager.AppSettings["CacheDefaultDurationMinutes"], out result) ? result : DefaultCacheDurationMinuts;
@@ -25,9 +25,15 @@ namespace Cache
 
         public abstract T Get<T>(string key);
 
-        public abstract void Set<T>(string key, T value);
+        public virtual void Set<T>(string key, T value)
+        {
+            Set<T>(key, value, CacheDuration);
+        }
 
-        public abstract void SetSliding<T>(string key, T value);
+        public virtual void SetSliding<T>(string key, T value)
+        {
+            SetSliding<T>(key, value, CacheDuration);
+        }
 
         public abstract void Set<T>(string key, T value, int duration);
 
