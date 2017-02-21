@@ -7,11 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCache", "WebApiCache\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cache", "Cache\Cache.csproj", "{EF0C7408-87FB-4812-888A-13328AA488C3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2EF6202-8D76-40B1-95B1-B661AD8E0D05}"
-	ProjectSection(SolutionItems) = preProject
-		WebApiCache-soapui.xml = WebApiCache-soapui.xml
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiClient", "WebApiClient\WebApiClient.csproj", "{21DAC5CE-AD11-4E4C-9226-4E2886647D42}"
 EndProject
 Global
