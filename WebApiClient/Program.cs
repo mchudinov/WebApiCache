@@ -15,7 +15,7 @@ namespace WebApiClient
                 PostRequest();
             }
 
-            Console.WriteLine("Type g - for Get request, p - for POst request, e - for exit.");
+            Console.WriteLine("Type g - for Get request, p - for Post request, e - for exit.");
 
             var input = string.Empty;
             while (input != "e")
